@@ -1,6 +1,8 @@
 # CSE214 Projects using Data Structures
 Programming assignments for data structures course.
 
+Taken Summer 2017 with Professor Ahmed Esmaili.
+
 * **Playlist _ArrayList_**
     * Used an _array list_ coded from scratch to build a playlist which would _record song information_.
 *	**RFID _LinkedList DepartmentStore_** (Radio-frequency Identification)
