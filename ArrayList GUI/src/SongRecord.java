@@ -1,11 +1,11 @@
 /*
  * Fanng Dai
- * 109684495
+ * SBUID
  * Fanng.dai@stonybrook.edu
  * CSE214 Rec1
  * Homework #1
  * Extra Credit
- * 
+ *
  * Contains information about a particular audio file.
  */
 
@@ -30,7 +30,7 @@ public class SongRecord{
 				this.minutes = m;
 			if(s<0 || s>59)
 				throw new IllegalArgumentException();
-			else 
+			else
 				this.seconds = s;
 			valid = true;
 		}
@@ -78,7 +78,7 @@ public class SongRecord{
 		try{
 			if(sec<0 || sec>59)
 				throw new IllegalArgumentException();
-			else 
+			else
 				this.seconds = sec;
 		}
 		catch(IllegalArgumentException e){
@@ -102,7 +102,7 @@ public class SongRecord{
 		else{
 			timeLength += this.seconds;
 		}
-		
+
 		String output = String.format("%-16s%-16s%-6s", this.title, this.artist, timeLength);
 		return output;
 	}

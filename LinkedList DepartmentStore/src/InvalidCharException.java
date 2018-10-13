@@ -1,9 +1,9 @@
 /**
  * The <code>InvalidCharException</code> is called when a character does not
  * belong at a certain index of a String.
- * 
+ *
  * @author
- * 		Fanng Dai, SBU ID#109684495
+ * 		Fanng Dai, SBU ID#
  * 		Fanng.dai@stonybrook.edu
  * <dt><b>Assignment:</b><dd>
  * 		Homework #2 for CSE 214, Summer 2017

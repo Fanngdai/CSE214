@@ -1,11 +1,11 @@
 /*
  * Fanng Dai
- * 109684495
+ * sbuid
  * Fanng.dai@stonybrook.edu
  * CSE214 Rec1
  * Homework #1
  * Extra Credit
- * 
+ *
  * No capacity to amt of playlist you can make.
  */
 public class IPod {
@@ -104,9 +104,9 @@ public class IPod {
 		try{
 			this.manyPlaylist ++;
 			Playlist[] biggerArray = new Playlist[manyPlaylist];
-			System.arraycopy(playlist, 0, biggerArray, 0, manyPlaylist-1);	
+			System.arraycopy(playlist, 0, biggerArray, 0, manyPlaylist-1);
 			biggerArray[manyPlaylist-1] = (Playlist) biggerArray[position].clone();
-			biggerArray[manyPlaylist-1].setPlaylistName(name);;	
+			biggerArray[manyPlaylist-1].setPlaylistName(name);;
 			this.playlist = biggerArray;
 			System.out.println("A new playlist has been added");
 		}

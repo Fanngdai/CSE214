@@ -1,16 +1,16 @@
 /**
  * Fanng Dai
- * 109684495
+ * sbuid
  * Fanng.dai@stonybrook.edu
  * CSE214 Rec1
  * Homework #1
  * Extra Credit
- * 
+ *
  * Run Gui For fakeTunes
  * Program will print in console because of IPod, Playlist, or SongRecord
  * being called. The reason is because of the class PlaylistOperations. If you
  * wish to stop printing on the console you may go back to the other classes
- * and delete the print commands. But I must warn you, PlaylistOperations will 
+ * and delete the print commands. But I must warn you, PlaylistOperations will
  * not work properly afterwards.
  */
 
@@ -30,7 +30,7 @@ public class PlaylistOperationsGUI extends Application{
 	Label titleL = new Label();
 	Label artistL = new Label();
 	Label lengthL = new Label();
-	Label songL2 = new Label();	
+	Label songL2 = new Label();
 	Label titleL2 = new Label();
 	Label artistL2 = new Label();
 	Label lengthL2 = new Label();
@@ -284,7 +284,7 @@ public class PlaylistOperationsGUI extends Application{
 					songL.setText("Song#\n----------\n");
 					titleL.setText("Title\n----------------\n");
 					artistL.setText("Artist\n---------------\n");
-					lengthL.setText("Length\n--------\n");	
+					lengthL.setText("Length\n--------\n");
 
 					songL.setText(songL.getText() + position);
 					titleL.setText(titleL.getText() + ipod.getPlaylist(playlistIndex).getSong(position).getTitle());
@@ -354,12 +354,12 @@ public class PlaylistOperationsGUI extends Application{
 				int position = Integer.parseInt(posT.getText());
 
 				if(ipod.size()==0){
-					// Some very important code 
+					// Some very important code
 					label.setText("What you tryna do? You deleted them all.");
 					label.setText(label.getText() + "\nNo Playlist available.");
 					label.setText(label.getText() + "\nSad life. I know.");
 					label.setTextFill(Color.PINK);
-				}	
+				}
 				else if(position <= 0 || position > ipod.size()){
 					label.setText("No song at position " + position + " to remove.");
 					throw new IllegalArgumentException();
@@ -544,7 +544,7 @@ public class PlaylistOperationsGUI extends Application{
 			int playlistIndex = ipod.getcurrentIndex();
 
 			try {
-				Playlist temp = Playlist.getSongByArtist(ipod.getPlaylist(playlistIndex), artistT.getText());		
+				Playlist temp = Playlist.getSongByArtist(ipod.getPlaylist(playlistIndex), artistT.getText());
 
 				// No songs found
 				if(!Playlist.songByArtist(ipod.getPlaylist(playlistIndex), artistT.getText())){
@@ -554,7 +554,7 @@ public class PlaylistOperationsGUI extends Application{
 					songL.setText("Song#\n----------");
 					titleL.setText("Title\n----------------");
 					artistL.setText("Artist\n---------------");
-					lengthL.setText("Length\n--------");	
+					lengthL.setText("Length\n--------");
 
 					for(int j=1; j<=ipod.getPlaylist(playlistIndex).size() && j<26; j++){
 						songL.setText(songL.getText() + "\n" + j);
@@ -566,13 +566,13 @@ public class PlaylistOperationsGUI extends Application{
 						else
 							lengthL.setText(lengthL.getText() + ":");
 						lengthL.setText(lengthL.getText() + temp.getSong(j).getSeconds());
-					} 
+					}
 
 					if(ipod.getPlaylist(playlistIndex).size() > 25){
 						songL2.setText("Song#\n----------");
 						titleL2.setText("Title\n----------------");
 						artistL2.setText("Artist\n---------------");
-						lengthL2.setText("Length\n--------");	
+						lengthL2.setText("Length\n--------");
 
 						for(int j=26; j<=temp.size(); j++){
 							songL2.setText(songL2.getText() + "\n" + j);
@@ -584,7 +584,7 @@ public class PlaylistOperationsGUI extends Application{
 							else
 								lengthL2.setText(lengthL2.getText() + ":");
 							lengthL2.setText(lengthL2.getText() + temp.getSong(j).getSeconds());
-						} 
+						}
 					}
 				}
 			}
@@ -618,7 +618,7 @@ public class PlaylistOperationsGUI extends Application{
 				songL.setText("Song#\n----------");
 				titleL.setText("Title\n----------------");
 				artistL.setText("Artist\n---------------");
-				lengthL.setText("Length\n--------");			
+				lengthL.setText("Length\n--------");
 
 
 				for(int j=1; j<=ipod.getPlaylist(playlistIndex).size() && j<26; j++){
@@ -631,13 +631,13 @@ public class PlaylistOperationsGUI extends Application{
 					else
 						lengthL.setText(lengthL.getText() + ":");
 					lengthL.setText(lengthL.getText() + temp.getSong(j).getSeconds());
-				} 
+				}
 
 				if(ipod.getPlaylist(playlistIndex).size() > 25){
 					songL2.setText("Song#\n----------");
 					titleL2.setText("Title\n----------------");
 					artistL2.setText("Artist\n---------------");
-					lengthL2.setText("Length\n--------");	
+					lengthL2.setText("Length\n--------");
 
 					for(int j=26; j<=temp.size(); j++){
 						songL2.setText(songL2.getText() + "\n" + j);
@@ -649,7 +649,7 @@ public class PlaylistOperationsGUI extends Application{
 						else
 							lengthL2.setText(lengthL2.getText() + ":");
 						lengthL2.setText(lengthL2.getText() + temp.getSong(j).getSeconds());
-					} 
+					}
 				}
 			}
 			catch(Exception ex){

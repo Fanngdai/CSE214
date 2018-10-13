@@ -1,12 +1,12 @@
 /**
  * The <code>ItemInfo</code> class contains information about a specific item
  * that can or has been sold in a given department store.
- * 
+ *
  * Each attribute is checked in the <code> DepartmentStore </code> class when
  * the user passes it in.
- * 
+ *
  * @author
- * 		Fanng Dai, SBU ID#109684495
+ * 		Fanng Dai, SBU ID#
  * 		Fanng.dai@stonybrook.edu
  * <dt><b>Assignment:</b><dd>
  * 		Homework #2 for CSE 214, Summer 2017
@@ -38,7 +38,7 @@ public class ItemInfo {
 	/**
 	 * Construct an instance of the <code>ItemInfo</code> with the given
 	 * parameters.
-	 * 
+	 *
 	 * @param name
 	 * 	The product name.
 	 * @param price
@@ -49,14 +49,14 @@ public class ItemInfo {
 	 * 	Encodes the original shelf position of the item.
 	 * @param currentLocation
 	 * 	Encodes the location of the item at the current time.
-	 * 
+	 *
 	 * <dt><b>Precondition:</b><dd>
 	 * 	rfidTagNumber is exactly 9 hexi-decimal characters.
 	 * 	originalLocation starts with s followed by exactly 5 digits.
 	 * 	currentLocation starts with s followed by exactly 5 digits or
 	 * 		starts with c followed by exactly 3 letters or is "out."
 	 */
-	public ItemInfo(String name, double price, String rfidTagNumber, 
+	public ItemInfo(String name, double price, String rfidTagNumber,
 			String originalLocation, String currentLocation){
 		this.name = name;
 		this.price = price;
@@ -68,7 +68,7 @@ public class ItemInfo {
 
 	/**
 	 * Mutator. Returns name of the product.
-	 * 
+	 *
 	 * @param name
 	 * 	The name of the product to be changed to.
 	 */
@@ -77,7 +77,7 @@ public class ItemInfo {
 	}
 	/**
 	 * Mutator. Returns price of the product.
-	 * 
+	 *
 	 * @param price
 	 * 	The price of the product to be changed to.
 	 */
@@ -86,10 +86,10 @@ public class ItemInfo {
 	}
 	/**
 	 * Mutator. Sets rfidTagNumber.
-	 * 
+	 *
 	 * @param rfidTagNumber
 	 * 	Encodes the radio frequency for scanning the item
-	 * 
+	 *
 	 * <dt><b>Precondition:</b><dd>
 	 * 	rfidTagNumber is exactly 9 hexi-decimal characters.
 	 */
@@ -98,13 +98,13 @@ public class ItemInfo {
 	}
 	/**
 	 * Mutator. Sets originalLocation.
-	 * 
+	 *
 	 * calls the setCurrentLocation to set the currentLocation to
 	 * originalLocation.
-	 * 
+	 *
 	 * @param originalLocation
 	 * 	Encodes the original shelf position of the item.
-	 * 
+	 *
 	 * <dt><b>Precondition:</b><dd>
 	 * 	originalLocation starts with s followed by exactly 5 digits.
 	 */
@@ -114,10 +114,10 @@ public class ItemInfo {
 	}
 	/**
 	 * Mutator. Sets currentLocation.
-	 * 
+	 *
 	 * @param currentLocation
 	 * 	Represents the location of the item at the current time.
-	 * 
+	 *
 	 * <dt><b>Precondition:</b><dd>
 	 * 	currentLocation starts with s followed by exactly 5 digits or
 	 * 		starts with c followed by exactly 3 letters or is "out."
@@ -127,7 +127,7 @@ public class ItemInfo {
 	}
 	/**
 	 *  Accessor. Returns the name of the product.
-	 *  
+	 *
 	 * @return
 	 * 	name of the product.
 	 */
@@ -136,7 +136,7 @@ public class ItemInfo {
 	}
 	/**
 	 *  Accessor. Returns the price of the product.
-	 *  
+	 *
 	 * @return
 	 * 	price of the product.
 	 */
@@ -145,7 +145,7 @@ public class ItemInfo {
 	}
 	/**
 	 *  Accessor. Returns the radio frequency of the product.
-	 *  
+	 *
 	 * @return
 	 * 	radio frequency
 	 */
@@ -154,7 +154,7 @@ public class ItemInfo {
 	}
 	/**
 	 * Accessor. Returns the original shelf position of the item.
-	 * 
+	 *
 	 * @return
 	 * 	original shelf position of the item.
 	 */
@@ -163,7 +163,7 @@ public class ItemInfo {
 	}
 	/**
 	 * Accessor. Returns the location of the item at the current time.
-	 * 
+	 *
 	 * @return
 	 * 	location of the item at the current time.
 	 */
@@ -173,12 +173,12 @@ public class ItemInfo {
 	/**
 	 * Returns the String represented by this <code>ItemInfo</code> object,
 	 * which is a neatly formatted table.
-	 * 
+	 *
 	 * @return
 	 * 	Returns the string Representation of this <code>ItemInfo</code> object.
 	 */
 	public String toString(){
-		return String.format("%-15s %-15s %-15s %-15s %-6.2f", this.name, 
+		return String.format("%-15s %-15s %-15s %-15s %-6.2f", this.name,
 				this.rfidTagNumber, this.originalLocation,
 				this.currentLocation, this.price );
 	}

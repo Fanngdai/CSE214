@@ -20,9 +20,9 @@ import javafx.stage.Stage;
 /**
  * The <code>DepartmentStoreGUI</code>  will ask user for input and follow the
  * users command. This will run as a GUI.
- * 
+ *
  * @author
- * 		Fanng Dai, SBU ID#109684495
+ * 		Fanng Dai, SBU ID#
  * 		Fanng.dai@stonybrook.edu
  * <dt><b>Assignment:</b><dd>
  * 		Homework #2 for CSE 214, Summer 2017
@@ -41,10 +41,10 @@ public class DepartmentStoreGUI extends Application{
 
 	/**
 	 * Checks if user entered the correct formatting of the rfid.
-	 * 
+	 *
 	 * @param word
 	 * 	The rfid to be checked
-	 * 
+	 *
 	 * @return
 	 * 	True if the length is exacly 9 and each character is a hexadecimal.
 	 * False otherwise.
@@ -58,24 +58,24 @@ public class DepartmentStoreGUI extends Application{
 
 	/**
 	 * Checks if users input for location is valid
-	 * 
+	 *
 	 * @param word
 	 * 	The word to be checked
 	 * @param flag
 	 * 	What to check. New location? Original location? Including out?
-	 * 
+	 *
 	 * @return
 	 * 	True if the word is valid, false otherwise.
 	 */
 	public static boolean checkLocation(String word, char flag){
 		// Is an shelf item
 		if((flag == 's' || flag == 'n' || flag == 'a') && word.length() == 6
-				&& Character.toLowerCase(word.charAt(0)) == ('s') 
+				&& Character.toLowerCase(word.charAt(0)) == ('s')
 				&& word.substring(1,6).matches("^[0-9]+$")){
 			return true;
 		}
 		// Is a cart item
-		else if((flag == 'c' || flag == 'n' || flag == 'a') && word.length() == 4 
+		else if((flag == 'c' || flag == 'n' || flag == 'a') && word.length() == 4
 				&& Character.toLowerCase(word.charAt(0)) == ('c')
 				&& word.substring(1,4).matches("^[0-9]+$")){
 			return true;
@@ -166,13 +166,13 @@ public class DepartmentStoreGUI extends Application{
 		HBox workspace = new HBox();
 		workspace.setSpacing(20);
 				workspace.setStyle("-fx-background-color: #000000;");
-				
+
 //		BackgroundImage bImage = new BackgroundImage(new Image("file:///Users/fannydai/Documents/workspace/DepartmentStore/20562847_1507796599283351_841584405_n.jpg"),
 //				BackgroundRepeat.REPEAT, BackgroundRepeat.REPEAT, BackgroundPosition.CENTER,
 //				BackgroundSize.DEFAULT);
 //		Background background = new Background(bImage);
 //		workspace.setBackground(background);
-				
+
 		workspace.getChildren().addAll(left, display, scrollBar);
 		final Scene scene = new Scene(workspace, 850, 700);
 		primaryStage.setTitle("Department Store");
@@ -305,7 +305,7 @@ public class DepartmentStoreGUI extends Application{
 		});
 
 		update.setOnAction(e->{
-			display.setText("The following item(s) have been removed from the system:\n\n" 
+			display.setText("The following item(s) have been removed from the system:\n\n"
 					+ items.removeAllPurchasedGUI());
 		});
 

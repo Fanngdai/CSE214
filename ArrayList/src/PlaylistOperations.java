@@ -1,8 +1,8 @@
 /**
  * Constructs an <code>Playlist</code> object according to users input.
- * 
+ *
  * @author
- * 		Fanng Dai, SBU ID#109684495
+ * 		Fanng Dai, SBU ID#
  * 		Fanng.dai@stonybrook.edu
  * <dt><b>Assignment:</b><dd>
  * 		Homework #1 for CSE 214, Summer 2017
@@ -15,11 +15,11 @@ public class PlaylistOperations {
 
 	/**
 	 * Constructs an <code>Playlist</code> object according to users input.
-	 * 
+	 *
 	 * @param args
 	 * @throws FullPlaylistException
 	 * 	<code>Playlist</code> has reached max capacity
-	 * 
+	 *
 	 * @throws IllegalArgumentException
 	 * 	Value passed is not valid.
 	 */
@@ -41,12 +41,12 @@ public class PlaylistOperations {
 			System.out.println("P) Print All Songs");
 			System.out.println("S) Size");
 			System.out.println("Q) Quit");
-			
+
 			// The users menu option
 			String input;
 			Scanner stdin = new Scanner(System.in);
 
-			try{				
+			try{
 				// Promt user to
 				System.out.print("\nSelect a menu option: ");
 				// stores userInput into input and make it upper case
@@ -54,8 +54,8 @@ public class PlaylistOperations {
 
 				switch(input){
 				/**
-				 * AddSong. Promt user to enter all attributes and store them 
-				 * accordingly. If user enters spaces or tabs after their 
+				 * AddSong. Promt user to enter all attributes and store them
+				 * accordingly. If user enters spaces or tabs after their
 				 * title/artist, program will remove it. If the position, min or
 				 * sec is invalid, program will inform user otherwise, Program
 				 * will add the song and inform user add has been successfully added.
@@ -80,7 +80,7 @@ public class PlaylistOperations {
 					while(artist.charAt(artist.length()-1) == ' ' || artist.charAt(artist.length()-1) == '\t'){
 						artist = artist.substring(0, artist.length()-1);
 					}
-					
+
 					SongRecord song = new SongRecord(title,artist,min,sec);
 
 					if(!playlist.validPositionAdd(position))
@@ -125,7 +125,7 @@ public class PlaylistOperations {
 						System.out.println(position + "\t" + playlist.getSong(position));
 					}
 					break;
-					/** 
+					/**
 					 * Remove song at position. If not valid, inform user.
 					 * Otherwise, remove song and inform user song has been
 					 * removed.
@@ -144,7 +144,7 @@ public class PlaylistOperations {
 					else
 						playlist.removeSong(position);
 					break;
-					/** 
+					/**
 					 * Print all songs in playlist.
 					 */
 				case "P":
@@ -168,7 +168,7 @@ public class PlaylistOperations {
 					// If user types in wrong menu option, it will inform user and go back to the top of do-while loop.
 				default:
 					System.out.println("Invalid menu option");
-				} 
+				}
 			}
 			catch(Exception ex){
 				// Should not happen. But if error occurs.
@@ -187,44 +187,44 @@ public class PlaylistOperations {
 	//		// variables that will store the users input
 	//		String title, artist;
 	//		int min, sec, position;
-	//		
+	//
 	//		playlist.addSong(new SongRecord("Radioactive","Imagine Dragons",4,28), 1);
 	//		playlist.addSong(new SongRecord("It's Time","Imagine Dragons",5,24), 1);
-	//		
+	//
 	//		// Same playlist as original referred differently
 	//		Playlist playlistDuplicate = (Playlist) playlist.clone();
-	//		
+	//
 	//		playlistDuplicate.addSong(new SongRecord("Push","MatchBox 20",3,59), 1);
-	//		
+	//
 	//		if(playlistDuplicate.equals(playlist)){
 	//			System.out.println("Playlist are the same. (Wrong)");
 	//		}
 	//		else{
 	//			System.out.println("Playlist are not the same. (Correct)");
 	//		}
-	//		
+	//
 	//		playlistDuplicate.removeSong(1);
-	//		
+	//
 	//		printHeader();
 	//		playlist.printAllSongs();
 	//		printHeader();
 	//		playlistDuplicate.printAllSongs();
-	//		
+	//
 	//		if(playlistDuplicate.equals(playlist)){
 	//			System.out.println("Playlist are the same. (Correct)");
 	//		}
 	//		else{
 	//			System.out.println("Playlist are not the same. (Wrong)");
 	//		}
-	//		
+	//
 	//		playlist.removeSong(1);
 	//		playlist.addSong(new SongRecord("It's Time","Imagine Dragons",5,24), 2);
-	//		
+	//
 	//		printHeader();
 	//		playlist.printAllSongs();
 	//		printHeader();
 	//		playlistDuplicate.printAllSongs();
-	//		
+	//
 	//		if(playlistDuplicate.equals(playlist)){
 	//			System.out.println("Playlist are the same. (Wrong)");
 	//		}

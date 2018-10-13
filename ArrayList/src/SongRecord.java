@@ -1,8 +1,8 @@
 /**
  * The <code>SongRecord</code> contains information about a particular audio file.
- * 
+ *
  * @author
- * 		Fanng Dai, SBU ID#109684495
+ * 		Fanng Dai, SBU ID#
  * 		Fanng.dai@stonybrook.edu
  * <dt><b>Assignment:</b><dd>
  * 		Homework #1 for CSE 214, Summer 2017
@@ -26,7 +26,7 @@ public class SongRecord {
 	/**
 	 * Constructor which sets the title, artist, min and sec of an audio file
 	 * to what is passed in.
-	 * 
+	 *
 	 * @param t
 	 * 	The title of the song
 	 * @param a
@@ -53,14 +53,14 @@ public class SongRecord {
 			if(s<0 || s>59)
 				throw new IllegalArgumentException();
 			// Otherwise, seconds is equal to what is passed in.
-			else 
+			else
 				this.seconds = s;
-			// If you get to this part of the code, min & sec are both valid. 
+			// If you get to this part of the code, min & sec are both valid.
 			// In this case, the song is valid.
 			valid = true;
 		}
 		catch(IllegalArgumentException e){
-			// If min or sec is not valid, promt user. Valid is false meaning 
+			// If min or sec is not valid, promt user. Valid is false meaning
 			// the information given cannot form an SongRecord object.
 			System.out.println("Invalid song length.");
 		}
@@ -68,7 +68,7 @@ public class SongRecord {
 
 	/**
 	 * Returns the title of the song.
-	 * 
+	 *
 	 * @return
 	 * 	Returns the title of the song.
 	 */
@@ -77,7 +77,7 @@ public class SongRecord {
 	}
 	/**
 	 * Returns the artist of the song.
-	 * 
+	 *
 	 * @return
 	 * 	Returns the artist of the song.
 	 */
@@ -86,7 +86,7 @@ public class SongRecord {
 	}
 	/**
 	 * Returns the length in minutes of the song.
-	 * 
+	 *
 	 * @return
 	 * 	Returns the length in minutes of the song.
 	 */
@@ -95,7 +95,7 @@ public class SongRecord {
 	}
 	/**
 	 * Returns the length in seconds of the song.
-	 * 
+	 *
 	 * @return
 	 * 	Returns the length in seconds of the song.
 	 */
@@ -104,7 +104,7 @@ public class SongRecord {
 	}
 	/**
 	 * Returns if the song is valid with the passed in parameters.
-	 * 
+	 *
 	 * @return
 	 * 	true if the song is valid with the passed in parameters.
 	 * 	false otherwise.
@@ -115,7 +115,7 @@ public class SongRecord {
 
 	/**
 	 * Sets the song title
-	 * 
+	 *
 	 * @param title
 	 * 	The title of the song.
 	 */
@@ -124,7 +124,7 @@ public class SongRecord {
 	}
 	/**
 	 * Sets the song artist
-	 * 
+	 *
 	 * @param artist
 	 * 	The artist of the song.
 	 */
@@ -133,10 +133,10 @@ public class SongRecord {
 	}
 	/**
 	 * Sets the length in minutes of the song
-	 * 
+	 *
 	 * <dt><b>Precondition:</b><dd>
 	 * 	The passed in value, min, cannot be negative.
-	 * 
+	 *
 	 * @param min
 	 * 	The length of the song in minutes
 	 */
@@ -156,10 +156,10 @@ public class SongRecord {
 	}
 	/**
 	 * Sets the length in seconds of the song
-	 * 
+	 *
 	 * <dt><b>Precondition:</b><dd>
 	 * 	The passed in value, sec, cannot be negative or larger than 59.
-	 * 
+	 *
 	 * @param min
 	 * 	The length of the song in seconds
 	 */
@@ -170,7 +170,7 @@ public class SongRecord {
 			if(sec<0 || sec>59)
 				throw new IllegalArgumentException();
 			// Otherwise, it is valid and seconds is equal to what is passed in
-			else 
+			else
 				this.seconds = sec;
 		}
 		catch(IllegalArgumentException e){
@@ -181,10 +181,10 @@ public class SongRecord {
 
 	/**
 	 * Compares this SOngRecord to another object for equality.
-	 * 
+	 *
 	 * @param obj
 	 * 	An object in which this <code>SongRecord</code> is compare to.
-	 * 
+	 *
 	 * @return
 	 * 	Returns true if the obj refers to a <code>SongRecord</code> object with
 	 * 	the same title, artist, minutes, and seconds. False otherwise.
@@ -199,7 +199,7 @@ public class SongRecord {
 	/**
 	 * Gets the String represented of this <code>SongRecord</code> object, which
 	 * is a neatly formatted single line on the information about the audio file.
-	 * 
+	 *
 	 * @return
 	 * 	Returns the string Representation of this <code>SongRecord</code> object.
 	 */

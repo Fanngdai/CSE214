@@ -1,9 +1,9 @@
 /**
  * The <code>Email</code> class contains everything within an email such as who
  * the email is to, the subject, body, and the time sent.
- * 
+ *
  * @author
- * 		Fanng Dai, SBU ID#109684495
+ * 		Fanng Dai, SBU ID#
  * 		Fanng.dai@stonybrook.edu
  * <dt><b>Assignment:</b><dd>
  * 		Homework #5 for CSE 214, Summer 2017
@@ -39,7 +39,7 @@ public class Email implements Serializable, Comparable{
 
 	/**
 	 * A constructor which sets the attributes of <code>Email</code> accordingly.
-	 * 
+	 *
 	 * @param to
 	 * 	"to" field
 	 * @param cc
@@ -119,10 +119,10 @@ public class Email implements Serializable, Comparable{
 	 * If the passed in parameter is not an instance of <code>Email</code> it
 	 * would return -2. (Which is to be held in the class calling this method.)
 	 * Otherwise, it will compare the two strings.
-	 * 
+	 *
 	 * @param o
 	 * 	An object which should be an <code>Email</code> object.
-	 * 
+	 *
 	 * @return
 	 * 	0 if the two strings are the same.
 	 * 	-1 if a is smaller than b.
@@ -149,10 +149,10 @@ public class Email implements Serializable, Comparable{
 
 	/**
 	 * Checks if two emails are equal.
-	 * 
+	 *
 	 * @param email
 	 * 	The email which we are checking if it is equal
-	 * 
+	 *
 	 * @return
 	 * 	True if this <code>Email</code> is the same as the parameter <code>Email</code>.
 	 */

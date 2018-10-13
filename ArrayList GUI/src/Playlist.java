@@ -1,11 +1,11 @@
 /*
  * Fanng Dai
- * 109684495
+ * sbuid
  * Fanng.dai@stonybrook.edu
  * CSE214 Rec1
  * Homework #1
  * Extra Credit
- * 
+ *
  * Stores all SongRecord objects that belong to a particular playlist.
  * position refers to the position in the PLaylist and not the position inside the array.
  * Position starts at 1 while array starts at 0. array + 1 = position.
@@ -42,7 +42,7 @@ public class Playlist implements Cloneable{
 	public int size(){
 		return this.manySongRecord;
 	}
-	
+
 	public void setPlaylistName(String name){
 		this.playlistName = name;
 	}
@@ -52,13 +52,13 @@ public class Playlist implements Cloneable{
 
 	// Add song to that position and shift every song at that position and after one space back
 	public void addSong(SongRecord song, int position) throws FullPlaylistException{
-		try{			
+		try{
 			if(manySongRecord == CAPACITY)
 				throw new FullPlaylistException();
 			else if(position > manySongRecord+1 || position <= 0){
 				throw new IllegalArgumentException();
 			}
-			else{	
+			else{
 				this.manySongRecord++;
 				SongRecord[] biggerArray = new SongRecord[manySongRecord];
 
@@ -95,7 +95,7 @@ public class Playlist implements Cloneable{
 			System.out.println("No song at position " + position + " to remove.");
 		}
 	}
-	
+
 	// Get song at position
 	public SongRecord getSong(int position){
 		try{
@@ -125,7 +125,7 @@ public class Playlist implements Cloneable{
 		}
 		return answer;
 	}
-	
+
 	public static boolean songByArtist(Playlist originalList, String artist) throws FullPlaylistException {
 		for(int i=1; i<=originalList.size(); i++){
 			if(artist.equalsIgnoreCase(originalList.getSong(i).getArtist()))
@@ -135,7 +135,7 @@ public class Playlist implements Cloneable{
 	}
 	// Prints all songs
 	public void printAllSongs(){
-		
+
 		System.out.println(String.format("%5s%10s%17s%16s", "Song#", "Title", "Artist", "Length"));
 		System.out.println("------------------------------------------------");
 		for(int i=0; i<manySongRecord; i++){
@@ -145,7 +145,7 @@ public class Playlist implements Cloneable{
 	}
 
 	// Copies Playlist and returns it. (Not referenced to the same playlist)
-	public Object clone(){ 
+	public Object clone(){
 		Playlist answer = new Playlist();
 		try {
 			answer = (Playlist)super.clone();
@@ -174,7 +174,7 @@ public class Playlist implements Cloneable{
 			}
 			return true;
 		}
-		else 
+		else
 			return false;
 	}
 	public String toString(){

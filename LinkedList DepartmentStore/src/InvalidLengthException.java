@@ -1,9 +1,9 @@
 /**
  * The <code>InvalidLengthException</code> is called when the users input is
  * not formatted correctly.
- * 
+ *
  * @author
- * 		Fanng Dai, SBU ID#109684495
+ * 		Fanng Dai, SBU ID#
  * 		Fanng.dai@stonybrook.edu
  * <dt><b>Assignment:</b><dd>
  * 		Homework #2 for CSE 214, Summer 2017
@@ -13,7 +13,7 @@
 public class InvalidLengthException extends Exception{
 	/**
 	 * Error when the originalLocation input is not the correct length.
-	 * 
+	 *
 	 * @param word
 	 * 	The string we are checking
 	 */
@@ -27,7 +27,7 @@ public class InvalidLengthException extends Exception{
 	}
 	/**
 	 * Error when the rfidTagNumber input is not the correct length.
-	 * 
+	 *
 	 * @param word
 	 * 	The string we are checking
 	 */
@@ -40,7 +40,7 @@ public class InvalidLengthException extends Exception{
 		}
 	}
 	/**
-	 * A word is too short. 
+	 * A word is too short.
 	 */
 	public void tooShort(){
 		System.out.println("Length too short.");

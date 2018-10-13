@@ -2,9 +2,9 @@
  * The <code>Elevator</code> has the current floor and the command.
  * It will go to the commands source floor to pick up the passenger
  * and drop them off at the destination.
- * 
+ *
  * @author
- * 		Fanng Dai, SBU ID#109684495
+ * 		Fanng Dai, SBU ID#
  * 		Fanng.dai@stonybrook.edu
  * <dt><b>Assignment:</b><dd>
  * 		Homework #3 for CSE 214, Summer 2017

@@ -1,9 +1,9 @@
 /**
  * The <code>DepartmentStore</code>  will ask user for input and follow the
  * users command.
- * 
+ *
  * @author
- * 		Fanng Dai, SBU ID#109684495
+ * 		Fanng Dai, SBU ID#
  * 		Fanng.dai@stonybrook.edu
  * <dt><b>Assignment:</b><dd>
  * 		Homework #2 for CSE 214, Summer 2017
@@ -16,16 +16,16 @@ public class DepartmentStore {
 	private static Scanner stdin = new Scanner(System.in);
 	private static String stringInput;
 	/**
-	 * Removes all the spaces and tabs at the end of the string. 
-	 * 
+	 * Removes all the spaces and tabs at the end of the string.
+	 *
 	 * @param word
 	 * 	Word which we are looking at to remove spaces and tabs
-	 * 
+	 *
 	 * @return
 	 * 	The parameter without the spaces in the end.
 	 */
 	private static String removeSpace(String word){
-		while((word.charAt(word.length()-1) == ' ' 
+		while((word.charAt(word.length()-1) == ' '
 				|| word.charAt(word.length()-1) == '\t' || word.charAt(word.length()-1) == '\n')){
 			word = word.substring(0, word.length()-1);
 			if(word == null)
@@ -36,10 +36,10 @@ public class DepartmentStore {
 
 	/**
 	 * Checks for valid name
-	 * 
+	 *
 	 * Method keep will asking user for name of product until answer given is a
 	 * valid name. (Name cannot be just spaces or tabs)
-	 * 
+	 *
 	 * @return
 	 * @throws InvalidLengthException
 	 */
@@ -71,7 +71,7 @@ public class DepartmentStore {
 	 * Continuously ask the user to input the correct format (double) until
 	 * user is correct. Checks to make sure it is a double by passing it in
 	 * directly as a double and throwing an exception if it not.
-	 * 
+	 *
 	 * @return
 	 * 	The users input. price.
 	 */
@@ -90,7 +90,7 @@ public class DepartmentStore {
 	 * Continuously ask the user to input a 9 hexadecimal number until user
 	 * enters the correct string. Method makes sure user entered it correctly
 	 * and passes it onto to rfidTagNumber in the main method.
-	 * 
+	 *
 	 * @return
 	 * 	rfidTagNumber - correctly
 	 */
@@ -127,12 +127,12 @@ public class DepartmentStore {
 	}
 /**
  * Ask the user for the location. Depending on what is called.
- * 
+ *
  * flag = 's' -> s#####
  * flag = 'c' -> c###
  * flag = 'n' -> no "out" yes s##### & c###
  * flag = 'a' -> any of the following including "out"
- * 
+ *
  * @param message
  * 	The message to be printed. Ask user to enter location.
  * @param flag
@@ -150,7 +150,7 @@ public class DepartmentStore {
 
 				// shelf location only
 				if((flag == 's' || flag == 'n' || flag == 'a') && stringInput.length() == 6
-						&& Character.toLowerCase(stringInput.charAt(0)) == ('s') 
+						&& Character.toLowerCase(stringInput.charAt(0)) == ('s')
 						&& stringInput.substring(1,6).matches("^[0-9]+$")){
 					validString = true;
 				}
@@ -209,11 +209,11 @@ public class DepartmentStore {
 			switch(input) {
 			/**
 			 * Clean store
-			 * 
+			 *
 			 * Goes through all items that are currently on a shelf that isn't
 			 * in their original location and place them back to their original
 			 * location.
-			 * 
+			 *
 			 * This does not affect items in carts or items that are "out."
 			 * Print a formatted table of all items that hace been moved in
 			 * this process.
@@ -238,7 +238,7 @@ public class DepartmentStore {
 				break;
 				/**
 				 * List by location
-				 * 
+				 *
 				 * Prompts the user for a location in the store and prints the
 				 * list of all items that are currently in that location,
 				 * sorted by rfidTagNumber.
@@ -249,15 +249,15 @@ public class DepartmentStore {
 				break;
 				/**
 				 * Move an item in the store
-				 * 
+				 *
 				 * Prompts the user for an rfidTagNumber, a source location,
 				 * and a destination location of an item to move.
-				 * 
+				 *
 				 * If the item is not found, report the situation to the user
 				 * and do nothing. If there are duplicate items with the same
 				 * rfidTagNumber in one location, moving any given one of them
 				 * is fine.
-				 * 
+				 *
 				 * If the location entered is not a valid location, print an
 				 * error message indication that this is the case.
 				 */
@@ -270,10 +270,10 @@ public class DepartmentStore {
 				break;
 				/**
 				 * Checkout
-				 * 
+				 *
 				 * Takes a cart number and changes the location of every item
 				 * in the corresponding cart to "out."
-				 * 
+				 *
 				 * Print a formatted table of all items that have been checked
 				 * out in this process. Print a message to the user of the
 				 * total cost of all the items that were in the given cart.
@@ -288,7 +288,7 @@ public class DepartmentStore {
 				break;
 				/**
 				 * Print all items in store
-				 * 
+				 *
 				 * Prints the list of all items that are currently stored in
 				 * the system, sorted by rfidTagNumber. This includes
 				 * everything that is on a shelf, in a cart, or "out."
@@ -298,7 +298,7 @@ public class DepartmentStore {
 				break;
 				/**
 				 * Print by RFID tag number
-				 * 
+				 *
 				 * Goes through the store's inventory and prints all items that
 				 * have the given rfidTagNumber. The table is to be printed the
 				 * same format as the other print commands.
@@ -309,11 +309,11 @@ public class DepartmentStore {
 				break;
 				/**
 				 * Update inventory system
-				 * 
+				 *
 				 * Goes through the store's inventory and removes all items
 				 * that are list as being "out" from the system. Items that are
 				 * in carts or shelves are not affected by this command.
-				 * 
+				 *
 				 * Print a formatted table of all the items that have been
 				 * removed in this process.
 				 */

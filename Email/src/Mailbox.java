@@ -1,12 +1,12 @@
 /**
  * The <code>Mailbox</code> represents an email box and contains all the folders
  * and remaining logic.
- * 
+ *
  * Note this is NOT where the main method is. The main method is at
  * <code>Mail</code> class. This is to prevent the class being too long.
- * 
+ *
  * @author
- * 		Fanng Dai, SBU ID#109684495
+ * 		Fanng Dai, SBU ID#
  * 		Fanng.dai@stonybrook.edu
  * <dt><b>Assignment:</b><dd>
  * 		Homework #5 for CSE 214, Summer 2017
@@ -37,7 +37,7 @@ public class Mailbox implements Serializable{
 	private ArrayList<Folder> folders = new ArrayList<Folder>();
 
 	/**
-	 * 
+	 *
 	 */
 	public Mailbox(){
 		folders.add(inbox);
@@ -64,7 +64,7 @@ public class Mailbox implements Serializable{
 	 * Gets the folder in folders.
 	 * @param name
 	 * 	Name of the folder
-	 * 
+	 *
 	 * @return
 	 * 	<code>Folder</code> with the given parameter name
 	 */
@@ -98,8 +98,8 @@ public class Mailbox implements Serializable{
 
 	/**
 	 * Deletes a folder in the list.
-	 * The inbox and trash folders cannot be deleted. 
-	 * 
+	 * The inbox and trash folders cannot be deleted.
+	 *
 	 * @param name
 	 * 	The name of the folder to be deleted.
 	 */
@@ -121,7 +121,7 @@ public class Mailbox implements Serializable{
 	 * Gets the user input on the contents of the email and adds it to the inbox
 	 * To, cc and bcc cannot all be left empty.
 	 * Subject cannot be left empty. Body can be null
-	 * 
+	 *
 	 * Reset the time to when it was sent. (Everything filled out)
 	 */
 	public void composeEmail(){
@@ -161,10 +161,10 @@ public class Mailbox implements Serializable{
 //		if(temp.getTo()==null && temp.getCc()==null && temp.getBcc()==null){
 //			System.out.println("No address to send to. Email deleted.");
 //		}
-		
+
 		GregorianCalendar cal =  new GregorianCalendar();
 		temp.setTimestamp(cal);
-		
+
 		inbox.addEmail(temp);
 		System.out.println("\nEmail successfully added to Inbox.\n");
 	}
@@ -173,7 +173,7 @@ public class Mailbox implements Serializable{
 	 * Moves the Email to the trash. (This method shouldn't remove any emails
 	 * from folders, the method removeEmail should be called and then deletedEmail
 	 * is called on the result)
-	 * 
+	 *
 	 * @param email
 	 * 	email to delete and move.
 	 */
@@ -194,7 +194,7 @@ public class Mailbox implements Serializable{
 	/**
 	 * Takes the given email and puts in the given folder. If the folder cannot
 	 * be found, instead move it to the inbox.
-	 * 
+	 *
 	 * @param email
 	 * 	Email to move
 	 * @param target

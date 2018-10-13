@@ -3,7 +3,7 @@
  * attribute array has reached its max capacity.
  * 
  * @author
- * 		Fanng Dai, SBU ID#109684495
+ * 		Fanng Dai, SBU ID#
  * 		Fanng.dai@stonybrook.edu
  * <dt><b>Assignment:</b><dd>
  * 		Homework #1 for CSE 214, Summer 2017

@@ -1,9 +1,9 @@
 /**
  * The <code>BooleanSource</code> randomly returns true or false according the
  * probability the user entered.
- * 
+ *
  * @author
- * 		Fanng Dai, SBU ID#109684495
+ * 		Fanng Dai, SBU ID#
  * 		Fanng.dai@stonybrook.edu
  * <dt><b>Assignment:</b><dd>
  * 		Homework #3 for CSE 214, Summer 2017
@@ -24,7 +24,7 @@ public class BooleanSource {
 			System.out.println("Invalid Probability.");
 		}
 	}
-	
+
 	// Returns true or false according to the probability.
 	public boolean requestArrived(){
 		return (Math.random() < probability);

@@ -3,21 +3,21 @@
  * a elevator if the elevator is empty, thus, removing them from the queue.
  * Taking them to their destination. Calculates the amount of time they waited
  * and the total amout of passengers the elevator picked up.
- * 
+ *
  * @author
- * 		Fanng Dai, SBU ID#109684495
+ * 		Fanng Dai, SBU ID#
  * 		Fanng.dai@stonybrook.edu
  * <dt><b>Assignment:</b><dd>
  * 		Homework #3 for CSE 214, Summer 2017
  * <dt><b>Date:</b><dd>
  * 		August 1st, 2017
  */
-public class Simulator {	
+public class Simulator {
 	/**
 	 * A method which adds and removes passengers from a queue, puts them in
 	 * the elevator if empty, and calcuates the total amount of time they
 	 * waited and the amount of passengers serviced.
-	 * 
+	 *
 	 * @param prob
 	 * 	The probability a passenger will come.
 	 * @param numFloor
@@ -113,9 +113,9 @@ public class Simulator {
 						waitTime[j] = 0;
 						totalRequest++;
 					}
-				}		
+				}
 			}
-			
+
 			// Print at the end of each step to inform user the data as of that step.
 			System.out.println("Total Wait Time = " + totalWaitTime
 					+ ", Total Requests = " + totalRequest);

@@ -1,31 +1,31 @@
 /**
  * The <code>TreeDriver</code> contains the main method which will prompt the
  * user for information in constructing a tree.
- * 
+ *
  * Program can accept any amount of nodes. Go forward and back for each node.
  * Print preorder and postorder format.
  * It will check all cases of wrong input. And deal with it accordingly.
- * 
+ *
  * L- prompt the user for a file naem and build a new Tree. The entire tree
  * will be recreated each time this menu option is chosen.
  * Will throw exception if error with file occurs.
- * 
+ *
  * H- This option will begin asking questions starting from the root of the
  * tree; if there is no tree set up, dusplay an error message. When displaying
  * with answers, display each answer on a seperate line with a number
  * associated with it, similar to a menu. Include another option, 0(zero) to
  * exit the help session and return to the menu.
- * 
+ *
  * T - Traverse the tree in pre-order and siplay the label, prompt, and message
  * in each node on a separate line.
- * 
+ *
  * U - Traverse the tree in post-order and display the label, prompt, and message
  * in each node on a separate line.
- * 
+ *
  * Q - quit the program
- * 
+ *
  * @author
- * 		Fanng Dai, SBU ID#109684495
+ * 		Fanng Dai, SBU ID#
  * 		Fanng.dai@stonybrook.edu
  * <dt><b>Assignment:</b><dd>
  * 		Homework #4 for CSE 214, Summer 2017
@@ -58,7 +58,7 @@ public class TreeDriverEC {
 
 	/**
 	 * Checks to make sure blank lines in file are ignored.
-	 * 
+	 *
 	 * @return
 	 * 	a string which is not empty.
 	 */
@@ -73,11 +73,11 @@ public class TreeDriverEC {
 	/**
 	 * Prompts user to enter a file name.
 	 * If file exists, it is stored as a file otherwise, it notifies the user and exits.
-	 * 
+	 *
 	 * Stores file label, prompt and message accordingly.
 	 * If file is not formatted correctly, program will store the tree up until the error occurs in the file
 	 */
-	public static void loadFile(){	
+	public static void loadFile(){
 		boolean successful = true;
 		try {
 			System.out.print("Enter the file name> ");

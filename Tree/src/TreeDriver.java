@@ -1,27 +1,27 @@
 /**
  * The <code>TreeDriver</code> contains the main method which will prompt the
  * user for information in constructing a tree.
- * 
+ *
  * This code will only work if label does not have any spaces.
  * (By the example text file given) It is limited to a 3-ary tree.
  * Any size larger will not work for this code and will prompt user.
- * 
+ *
  * L- prompt the user for a file naem and build a new Tree. The entire tree
  * will be recreated each time this menu option is chosen.
- * 
+ *
  * H- This option will begin asking questions starting from the root of the
  * tree; if there is no tree set up, dusplay an error message. When displaying
  * with answers, display each answer on a seperate line with a number
  * associated with it, similar to a menu. Include another option, 0(zero) to
  * exit the help session and return to the menu.
- * 
+ *
  * T - Traverse the tree in pre-order and siplay the label, prompt, and message
  * in each node on a separate line.
- * 
+ *
  * Q - quit the program
- * 
+ *
  * @author
- * 		Fanng Dai, SBU ID#109684495
+ * 		Fanng Dai, SBU ID#
  * 		Fanng.dai@stonybrook.edu
  * <dt><b>Assignment:</b><dd>
  * 		Homework #4 for CSE 214, Summer 2017
@@ -52,7 +52,7 @@ public class TreeDriver {
 
 	/**
 	 * Checks to make sure blank lines in file are ignored.
-	 * 
+	 *
 	 * @return
 	 * 	a string which is not empty.
 	 */
@@ -67,12 +67,12 @@ public class TreeDriver {
 	/**
 	 * Prompts user to enter a file name.
 	 * If file exists, it is stored as a file otherwise, it notifies the user and exits.
-	 * 
+	 *
 	 * Stores file label, prompt and message accordingly.
 	 * If file is not formatted correctly, the previous <code>Tree</code> along
 	 * with the current one will be deleted.
 	 */
-	public static void loadFile(){	
+	public static void loadFile(){
 		boolean successful = true;
 		try {
 			System.out.print("Enter the file name> ");

@@ -1,9 +1,9 @@
 /**
  * The <code>TreeNode</code> is a node of the tree which has label, message
  * and prompt.
- * 
+ *
  * @author
- * 		Fanng Dai, SBU ID#109684495
+ * 		Fanng Dai, SBU ID#
  * 		Fanng.dai@stonybrook.edu
  * <dt><b>Assignment:</b><dd>
  * 		Homework #4 for CSE 214, Summer 2017
@@ -34,7 +34,7 @@ public class TreeNodeEC {
 	}
 	/**
 	 * Constructor that sets the root of the <code>Tree</code>.
-	 * 
+	 *
 	 * @param label
 	 * 	The label of the node.
 	 * @param prompt
@@ -99,7 +99,7 @@ public class TreeNodeEC {
 
 	/**
 	 * Checks if this <code>TreeNode</code> has any children.
-	 * 
+	 *
 	 * @return
 	 * 	True if it is a leaf, false otherwise.
 	 */
@@ -112,7 +112,7 @@ public class TreeNodeEC {
 
 	/**
 	 * Used to print the message and the prompts of the given tree.
-	 * 
+	 *
 	 * <dt><b>Precondition:</b><dd>
 	 * 	Node will never reach leaf.
 	 */
@@ -132,7 +132,7 @@ public class TreeNodeEC {
 	}
 	/**
 	 * Returns the Label followed by the prompt followed by the message.
-	 * 
+	 *
 	 * @return
 	 * 	the Label followed by the prompt followed by the message.
 	 */

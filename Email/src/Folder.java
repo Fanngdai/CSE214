@@ -2,9 +2,9 @@
  * The <code>Folder</code> represents an email folder and will handle all of the
  * logic for adding and removing emails.
  * It also sorts the emails accordingly.
- * 
+ *
  * @author
- * 		Fanng Dai, SBU ID#109684495
+ * 		Fanng Dai, SBU ID#
  * 		Fanng.dai@stonybrook.edu
  * <dt><b>Assignment:</b><dd>
  * 		Homework #5 for CSE 214, Summer 2017
@@ -37,7 +37,7 @@ public class Folder implements Serializable{
 	 * Constructor that takes in a list of emails and puts it in the folder.
 	 * It changes the folder to a certain, given name and sets the
 	 * currentSortingMethod to whatever is passed in.
-	 * 
+	 *
 	 * @param emails
 	 * 	List of emails to put into folder
 	 * @param name
@@ -70,10 +70,10 @@ public class Folder implements Serializable{
 	 * Checks to make sure the passed in index is valid. Returns an
 	 * <code>Email</code> from the emails <code>ArrayList</code> in the
 	 * specified position.
-	 * 
+	 *
 	 * @param index
 	 * 	Location in emails to return the <code>Email</code>
-	 * 
+	 *
 	 * @return
 	 * 	<code>Email</code> at the specified index.
 	 * 	Null if the index is invalid.
@@ -81,7 +81,7 @@ public class Folder implements Serializable{
 	public Email getEmails(int index){
 		if(index < 0 || index > emails.size()-1){
 			return null;
-		}	
+		}
 		return this.emails.get(index);
 	}
 	public String getName(){
@@ -94,7 +94,7 @@ public class Folder implements Serializable{
 	/**
 	 * Adds an email to the folder according to the current sorting method.
 	 * If it is the first email. No sorting required! Otherwise, continue reading
-	 * 
+	 *
 	 * @param email
 	 * 	the email to add to the folder
 	 */
@@ -107,7 +107,7 @@ public class Folder implements Serializable{
 		emails.add(email);
 		int lastIndex = emails.size()-1;
 		int j = emails.size()-1;
-		
+
 		while(j>0 && email.getTimestamp().compareTo(emails.get(j-1).getTimestamp()) < 0)
 			emails.set(j, emails.get(--j));
 		emails.set(j, email);
@@ -115,7 +115,7 @@ public class Folder implements Serializable{
 
 	/**
 	 * Removes an email from the folder by index.
-	 * 
+	 *
 	 * @param index
 	 * 	location of arraylist to remove email
 	 * @return
@@ -159,10 +159,10 @@ public class Folder implements Serializable{
 
 	/**
 	 * Formats the date so that it looks like the example print out.
-	 * 
+	 *
 	 * @param calendar
 	 * 	The date which the <code>Email</code> object was made.
-	 * 
+	 *
 	 * @return
 	 * 	A string of the date which the email was made.
 	 */
@@ -172,7 +172,7 @@ public class Folder implements Serializable{
 		date = (calendar.get(GregorianCalendar.MONTH)+1) + "/" + calendar.get(GregorianCalendar.DAY_OF_MONTH)
 		+ "/" + calendar.get(GregorianCalendar.YEAR);
 		hour = calendar.get(GregorianCalendar.HOUR) + ":" +
-				(calendar.get(GregorianCalendar.MINUTE) < 10? "0" + calendar.get(GregorianCalendar.MINUTE) : calendar.get(GregorianCalendar.MINUTE)) 
+				(calendar.get(GregorianCalendar.MINUTE) < 10? "0" + calendar.get(GregorianCalendar.MINUTE) : calendar.get(GregorianCalendar.MINUTE))
 				+ (calendar.get(GregorianCalendar.AM_PM) == 0?"AM":"PM");
 		return hour + " " + date;
 	}

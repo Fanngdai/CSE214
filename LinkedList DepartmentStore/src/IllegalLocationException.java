@@ -1,9 +1,9 @@
 /**
  * The <code>InvalidLocationException</code> is called when there is a location
  * of the item which is not valid.
- * 
+ *
  * @author
- * 		Fanng Dai, SBU ID#109684495
+ * 		Fanng Dai, SBU ID#
  * 		Fanng.dai@stonybrook.edu
  * <dt><b>Assignment:</b><dd>
  * 		Homework #2 for CSE 214, Summer 2017

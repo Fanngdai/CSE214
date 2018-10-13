@@ -2,13 +2,13 @@
  * The <code>ItemList</code> is a list of ItemInfo nodes which is stored in a
  * list. This class will get the link within the nodes. Remove if needed and
  * add if needed.
- * 
+ *
  * The complexity for insertInfo, removeAllPurchased, moveItem, printAll,
  * printByLocation, cleanStore and checkOut are all O(n) because you have
  * to loop through the whole list for the most part. (Worst case)
- * 
+ *
  * @author
- * 		Fanng Dai, SBU ID#109684495
+ * 		Fanng Dai, SBU ID#
  * 		Fanng.dai@stonybrook.edu
  * <dt><b>Assignment:</b><dd>
  * 		Homework #2 for CSE 214, Summer 2017
@@ -41,7 +41,7 @@ public class ItemList{
 	/**
 	 * Returns the size of the list.
 	 * Not needed for this homework.
-	 * 
+	 *
 	 * @return
 	 * 	size of list
 	 */
@@ -70,7 +70,7 @@ public class ItemList{
 	}
 	/**
 	 * The header of the table for gui.
-	 * 
+	 *
 	 * @return
 	 * 	the header of the list in a neatly formatted way
 	 */
@@ -87,7 +87,7 @@ public class ItemList{
 	 * Accessor. Returns the cursor information.
 	 * If the cursor is null, meaning the list is empty, it will throw an
 	 * exception.
-	 * 
+	 *
 	 * @return
 	 * 	The ItemInfo at the current cursor.
 	 */
@@ -106,17 +106,17 @@ public class ItemList{
 	/**
 	 * Inserts the info into the list in its correct position based on its
 	 * rfidTagNumber.
-	 * 
+	 *
 	 * Set the new information as a node. Then check if the newItem is null.
 	 * Go through all the nodes and check if that nodes rfidTag matches or is
 	 * greater than the passed in rfidTag. If it is, put the new node before
-	 * it. Otherwise, set it after the list which is the tail. 
-	 * 
+	 * it. Otherwise, set it after the list which is the tail.
+	 *
 	 * In this method, there is setting up the list, adding before the cursor,
 	 * and adding after the cursor.
-	 * 
+	 *
 	 * The complexity is O(n).
-	 * 
+	 *
 	 * @param name
 	 * 	The name of the <code>ItemInfo</code> object.
 	 * @param rfidTag
@@ -180,7 +180,7 @@ public class ItemList{
 	/**
 	 * Removes all nodes in the list that have current location listed as "out"
 	 * and displays a list of all items that have been removed in this fashion.
-	 * 
+	 *
 	 * The complexity is O(n).
 	 */
 	public void removeAllPurchased(){
@@ -250,9 +250,9 @@ public class ItemList{
 	/**
 	 * Moves an item with a given rfidTagNumber from a source location to a
 	 * destination location.
-	 * 
+	 *
 	 * The complexity is O(n).
-	 * 
+	 *
 	 * @param rfidTag
 	 * 	Radio frequency
 	 * @param source
@@ -262,7 +262,7 @@ public class ItemList{
 	 * @throws
 	 * 	Destination is not in the correct format. (cart, shelf, "out").
 	 * 	If source is equal to "out".
-	 * 
+	 *
 	 * @return
 	 * 	True if an item of the given rfidTagNumber was found at the given
 	 * 	source location, and moved successfully to dest. False otherwise.
@@ -288,7 +288,7 @@ public class ItemList{
 	}
 	/**
 	 * Prints a neatly formatted list of all items currently in list.
-	 * 
+	 *
 	 * The complexity is O(n).
 	 */
 	public void printAll(){
@@ -311,9 +311,9 @@ public class ItemList{
 	/**
 	 * Prints a neatly formatted list of all items in a specified current
 	 * location.
-	 * 
+	 *
 	 * The complexity is O(n).
-	 * 
+	 *
 	 * @param location
 	 * 	Location to look for item
 	 */
@@ -329,10 +329,10 @@ public class ItemList{
 	/**
 	 * Does the same as printByLocation but instead, it returns a String which
 	 * will be displayed in the GUI
-	 * 
+	 *
 	 * @param location
 	 * 	Location to look for item
-	 * 
+	 *
 	 * @return
 	 * 	A string of the header and all the items in this location
 	 */
@@ -347,9 +347,9 @@ public class ItemList{
 	}
 	/**
 	 * Prints a neatly formatted list of all items with the same rFidTagNumber
-	 * 
+	 *
 	 * The complexity is O(n).
-	 * 
+	 *
 	 * @param location
 	 * 	Location to look for item
 	 */
@@ -376,7 +376,7 @@ public class ItemList{
 	 * and places it back where it belongs (original location). Items that are
 	 * "out" or currently in a cart are not affected by this command.
 	 * Display a table for all out of place items moved in this fashion.
-	 * 
+	 *
 	 * The complexity is O(n).
 	 */
 	public void cleanStore(){
@@ -424,12 +424,12 @@ public class ItemList{
 	 * Goes through a given cart and checks out each item (changes its location
 	 * to "out"). A neatly formatted list of the items checked out is to be
 	 * printed and it must be sorted in order of rfidTagNumber.
-	 * 
+	 *
 	 * The complexity is O(n).
-	 * 
+	 *
 	 * @throws
 	 * 	Invalid cart numbers
-	 * 
+	 *
 	 * @return
 	 * 	Total cost for the items that were in the cart.
 	 */
@@ -472,11 +472,11 @@ public class ItemList{
 		return output + answer;
 	}
 	/**
-	 * Compares rfidTagNumber 
-	 * 
+	 * Compares rfidTagNumber
+	 *
 	 * @param o
 	 * 	The object which we are comparing it's rfidTagNumber to
-	 * 
+	 *
 	 * @return
 	 * 	-1 if a is smaller than b
 	 * 	1 if a is larger than b

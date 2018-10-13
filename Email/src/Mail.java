@@ -1,12 +1,12 @@
 /**
  * Runs the program accordingly.
  * Contains the main menu and submenu (inside folder with emails)
- * 
+ *
  * Mailbox only saves if you quit at the end. Otherwise, all information will
  * be lost.
- * 
+ *
  * @author
- * 		Fanng Dai, SBU ID#109684495
+ * 		Fanng Dai, SBU ID#
  * 		Fanng.dai@stonybrook.edu
  * <dt><b>Assignment:</b><dd>
  * 		Homework #5 for CSE 214, Summer 2017
@@ -40,17 +40,17 @@ public class Mail implements Serializable{
 			mailbox = (Mailbox) fin.readObject();
 			file.close();
 			System.out.println("Previous save found, starting with previous mailbox.\n");
-		} 
+		}
 		catch (IOException a) {
 			mailbox = new Mailbox();
 			System.out.println("Previous save not found, starting with an empty mailbox.\n");
-		} 
+		}
 		catch (ClassNotFoundException c) {
 			mailbox = new Mailbox();
 			System.out.println("Previous save not found, starting with an empty mailbox.\n");
 		}
 	}
-	
+
 	public static void fileWrite(){
 		try{
 			FileOutputStream file = new FileOutputStream("mailbox.obj");
@@ -98,11 +98,11 @@ public class Mail implements Serializable{
 
 	/**
 	 * Makes sure that when an index is asked, user enters a valid integer.
-	 * 
+	 *
 	 * When user enters 0, that is not a valid position. Since in the human
 	 * world, they start counting at 1. Therefore, 0 will become -1 which is
 	 * invalid.
-	 * 
+	 *
 	 * @return
 	 * 	An integer if the user entered an integer.
 	 * 	Otherwise, it will return -1 which is invalid.
@@ -122,29 +122,29 @@ public class Mail implements Serializable{
 	 * When prompted, the order printed is date descending.
 	 * This method continuously prints the current folder name followed by the
 	 * emails in this folder. It will also print the subMenu.
-	 * 
+	 *
 	 * M - Move email
 	 * 	Prompts the user to enter the index of the email they want to move.
 	 * 	If the index is not valid, it will inform the user and restart from subMenu.
 	 * 	It will then, print all the folders and prompt for the move to folder.
 	 * 	If that folder does not exist, the email will be moved to inbox.
-	 * 
+	 *
 	 * D - Delete email
 	 * 	Prompts user the index which the email is at. If the index is valid, it
 	 * 	will move the email to trash folder. Otherwise, it will inform user the
 	 * 	index does not exist.
-	 * 
+	 *
 	 * C - view email contents
 	 * 	Prints the <code>Email</code> accordingly. (toString)
-	 * 
+	 *
 	 * Sa- sort by subject line in ascending order
 	 * SD - sort by subject line in descending order
 	 * DA - sort by date in ascending order
 	 * DD - sort by date in descending order
-	 * 
+	 *
 	 * R- return to mailbox
 	 * 	Unless this is called, user to remain in the subMenu section of the code.
-	 * 
+	 *
 	 * If user enters some option not in the given options, they will be
 	 * informed and asked again.
 	 */
@@ -227,32 +227,32 @@ public class Mail implements Serializable{
 	 * Calls the fileWrite method which checks if a Mailbox has already been made.
 	 * If it is, it will set the mailbox to what was stored in the file, otherwise,
 	 * it will start a new email.
-	 * 
+	 *
 	 * This method will continuously call the Menu button once an action is
 	 * finished and "Q" is not called.
-	 * 
+	 *
 	 * A - Add Folder
 	 * 	Prompts user for the folder name and if it does not exist already, it
 	 * 	will add the folder. Otherwise, it will inform user it exists already
 	 * 	and go back to menu.
-	 * 
+	 *
 	 * R - Remove Folder
 	 * 	If folder exist and it is not inbox or trash then it will be deleted.
 	 * 	Otherwise, it will inform user it is impossible to remove and go back
 	 * 	to the menu.
-	 * 
+	 *
 	 * C - Compose Email
 	 * 	Prompt user for the recipient and will continue to if to, cc, and bcc
-	 * 	are all enpty. Subject cannot be empty as well. 
-	 * 
+	 * 	are all enpty. Subject cannot be empty as well.
+	 *
 	 * F - Open folder
 	 * I - Open Inbox
 	 * T - Open Trash
 	 * 	Opens the folder specified and goes to subMenu for that folder.
-	 * 
+	 *
 	 * E - Empty Trash
 	 * 	Removes everything in Trash.
-	 * 
+	 *
 	 * Q - Quit
 	 * 	Saves the Mailbox and exits the program.
 	 */

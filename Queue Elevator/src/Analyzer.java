@@ -1,11 +1,11 @@
 /**
  * The <code>Analyzer</code> prompts the user for the probability, floors, elevators and length of simulation.
  * It will then, calculate randomly with its entered data.
- * 
+ *
  * total Wait Time and total Request will not add up until the person is dropped off.
- * 
+ *
  * @author
- * 		Fanng Dai, SBU ID#109684495
+ * 		Fanng Dai, SBU ID#
  * 		Fanng.dai@stonybrook.edu
  * <dt><b>Assignment:</b><dd>
  * 		Homework #3 for CSE 214, Summer 2017

@@ -1,9 +1,9 @@
 /**
  * The <code>Tree</code> constructs a tree with the given information.
  * It can addNodes and begin session.
- * 
+ *
  * @author
- * 		Fanng Dai, SBU ID#109684495
+ * 		Fanng Dai, SBU ID#
  * 		Fanng.dai@stonybrook.edu
  * <dt><b>Assignment:</b><dd>
  * 		Homework #4 for CSE 214, Summer 2017
@@ -15,7 +15,7 @@
 import java.util.Scanner;
 
 public class TreeEC {
-	/** 
+	/**
 	 * The root of the <code>Tree</code>
 	 */
 	private TreeNodeEC root;
@@ -29,7 +29,7 @@ public class TreeEC {
 	}
 	/**
 	 * Constructor that sets the root of this <code>Tree</code>.
-	 * 
+	 *
 	 * @param root
 	 * 	The root of the <code>Tree</code>.
 	 */
@@ -55,7 +55,7 @@ public class TreeEC {
 
 	/**
 	 * Finds the label and returns that node.
-	 * 
+	 *
 	 * @param label
 	 * 	The label to search for.
 	 * @return
@@ -87,7 +87,7 @@ public class TreeEC {
 	 * parentLabel. The child node should be left justified meaning that it
 	 * should first be placed in the left most TreeNode reference, then the
 	 * middle, then the right.
-	 * 
+	 *
 	 * @param label
 	 * 	The "name" of the TreeNode
 	 * @param prompt
@@ -96,7 +96,7 @@ public class TreeEC {
 	 * 	Message displayed to the screen.
 	 * @param parentLabel
 	 *  The parent "name" of the current TreeNode
-	 * 
+	 *
 	 * @return
 	 * 	True if the node was successfully added to the tree. false otherwise.
 	 */
@@ -147,13 +147,13 @@ public class TreeEC {
 
 	/**
 	 * Finds the label and returns that node.
-	 * 
+	 *
 	 * @param label
 	 * 	The label to search for.
-	 * 
+	 *
 	 * <dt><b>precondition</b><dd>
 	 * 	Root is never a leaf.
-	 * 
+	 *
 	 * @return
 	 * 	A reference to the node that has the given label.
 	 * 	Null if no node has such label.
@@ -192,8 +192,8 @@ public class TreeEC {
 	 * Start the question and answer session
 	 * Will call the printMessagePrompt method from the <code>TreeNode</code>
 	 * class. This method will print the message and prompts of that node.
-	 * 
-	 * It will keep going until a correct choice is given or 
+	 *
+	 * It will keep going until a correct choice is given or
 	 */
 	public void beginSession(){
 		// Makes sure there is a tree beginning session.

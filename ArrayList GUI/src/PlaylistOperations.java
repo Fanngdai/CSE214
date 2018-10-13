@@ -1,11 +1,11 @@
 /*
  * Fanng Dai
- * 109684495
+ * sbuid
  * Fanng.dai@stonybrook.edu
  * CSE214 Rec1
  * Homework #1
  * Extra Credit
- * 
+ *
  * Sorry not as much comments. Comments are a bit distracting to me.
  */
 
@@ -44,7 +44,7 @@ public class PlaylistOperations {
 				System.out.print("Select a menu option: ");
 				// stores userInput into input and make it upper case
 				input = stdin.nextLine().toUpperCase();
-				
+
 				switch(input){
 				case "A":
 					System.out.println();
@@ -60,7 +60,7 @@ public class PlaylistOperations {
 					while(artist.charAt(artist.length()-1) == ' ' || artist.charAt(artist.length()-1) == '\t'){
 						artist = artist.substring(0, artist.length()-1);
 					}
-					
+
 					System.out.print("Enter the song length (minutes): ");
 					min = stdin.nextInt();
 					System.out.print("Enter the song length (seconds): ");
@@ -89,12 +89,12 @@ public class PlaylistOperations {
 					break;
 				case "C":
 					System.out.println();
-					
+
 					if(ipod.size()==0){
 						System.out.println("No Playlist.");
 						break;
 					}
-					
+
 					System.out.print("Enter New Playlist Name: ");
 					playlistName = stdin.nextLine();
 
@@ -172,7 +172,7 @@ public class PlaylistOperations {
 					break;
 				default:
 					System.out.println("Invalid menu option");
-				} 
+				}
 			}
 			catch(Exception ex){
 				System.out.println("Something happened. Error!");

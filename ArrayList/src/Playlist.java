@@ -1,9 +1,9 @@
 /**
  * The <code>Playlist</code> class implements <code>Cloneable</code>
  * which makes a clone of the passed in object.
- * 
+ *
  * @author
- * 		Fanng Dai, SBU ID#109684495
+ * 		Fanng Dai, SBU ID#
  * 		Fanng.dai@stonybrook.edu
  * <dt><b>Assignment:</b><dd>
  * 		Homework #1 for CSE 214, Summer 2017
@@ -19,11 +19,11 @@ public class Playlist implements Cloneable{
 	private static final int CAPACITY = 50;
 
 	/**
-	 * Construct an instance of the <code>Playlist</code> class with no 
+	 * Construct an instance of the <code>Playlist</code> class with no
 	 * SongRecords objects in it.
 	 *
 	 * <dt><d>Postcondition:</b><dd>
-	 * 	This <code>Playlist</code> has been initialized to an empty list of 
+	 * 	This <code>Playlist</code> has been initialized to an empty list of
 	 * SongRecords.
 	 **/
 	public Playlist(){
@@ -33,7 +33,7 @@ public class Playlist implements Cloneable{
 
 	/**
 	 * Returns the songRecords array in the <code>Playlist</code>.
-	 * 
+	 *
 	 * @return
 	 * 	Returns the songRecord array.
 	 */
@@ -42,10 +42,10 @@ public class Playlist implements Cloneable{
 	}
 	/**
 	 * Determines the number of SongRecords currently in this <code>Playlist</code>.
-	 * 
+	 *
 	 * <dt><b>Precondition:</b><dd>
 	 * 	This <code>SongRecord</code> object has been instantiated.
-	 * 
+	 *
 	 * @return
 	 * 	Returns the number of SongRecords in this <code>Playlist</code>.
 	 */
@@ -55,11 +55,11 @@ public class Playlist implements Cloneable{
 
 	/**
 	 * Checks if songRecord array has reached capacity.
-	 * 
+	 *
 	 * @param position
-	 * 	The index which is compared to check if it is valid to insert an 
+	 * 	The index which is compared to check if it is valid to insert an
 	 * element.
-	 * 
+	 *
 	 * @return
 	 * 	True if position is valid to insert element. False otherwise.
 	 */
@@ -76,33 +76,33 @@ public class Playlist implements Cloneable{
 	 * @param song
 	 * 	The new <code>SongRecord</code> object to add to this <code>Playlist</code>.
 	 * @param position
-	 * 	The position in the playlist where the <code>SongRecord</code> objects 
+	 * 	The position in the playlist where the <code>SongRecord</code> objects
 	 * in this <code>Playlist</code> is less than capacity.
 	 *
 	 * <dt><b>Precondition:</b><dd>
-	 *   This <code>SongRecord</code> object has been instantiated and 
+	 *   This <code>SongRecord</code> object has been instantiated and
 	 *   1<= position <= manySongRecord + 1. The number of <code>SongRecord</code>
 	 *   objects in this <code>Playlist</code> is less than CAPACITY.
-	 *   
+	 *
 	 * <dt><b>Postcondition:</b><dd>
-	 * 	The new song is now stored at the desired position in the 
+	 * 	The new song is now stored at the desired position in the
 	 * 	<code>Playlist</code>. All SongRecords that were originally in position
 	 * 	greater than or equal ot positopn are moved back one position.
-	 * 
+	 *
 	 * @throws <FullPlaylistException>
 	 * 	Indicates that songRecord array is full.
-	 * 
+	 *
 	 * @exception IllegalArgumentException
 	 * 	Indicates that <code>position</code> is not less than capacity.
 	 **/
 	public void addSong(SongRecord song, int position) throws FullPlaylistException{
-		try{			
+		try{
 			if(manySongRecord == CAPACITY)
 				throw new FullPlaylistException();
 			else if(!validPositionAdd(position)){
 				throw new IllegalArgumentException();
 			}
-			else{	
+			else{
 				this.manySongRecord++;
 				SongRecord[] biggerArray = new SongRecord[manySongRecord];
 
@@ -123,19 +123,19 @@ public class Playlist implements Cloneable{
 
 	/**
 	 * Removes a <code>SongRecord</code> from the array.
-	 * 
+	 *
 	 * @param position
 	 * 	The position in the playlist where the song will be removed
-	 * 
+	 *
 	 * <dt><b>Precondition:</b><dd>
 	 * 	This <code>SongRecord</code> object has been instanted and 1 <= position
 	 * 	<= manySongRecord.
-	 * 
+	 *
 	 * <dt><b>Postcondition:</b><dd>
 	 *  The <code>SongRecord</code> at the desired position in the <code>Playlist</code>
-	 *  has been removed. All SongRecords that were originally in positions 
+	 *  has been removed. All SongRecords that were originally in positions
 	 *  greater or equal to position are moved forward one position.
-	 *  
+	 *
 	 * @exception IllegalArgumentException
 	 * 	Indicates that position is not less than capacity.
 	 */
@@ -159,20 +159,20 @@ public class Playlist implements Cloneable{
 	}
 
 	/**
-	 * Get the <code>SongRecord</code> at the given position in this 
+	 * Get the <code>SongRecord</code> at the given position in this
 	 * <code>Playlist</code> object.
-	 * 
+	 *
 	 * @param position
 	 * 	position of the <code>SongRecord</code> to retrieve
-	 * 
+	 *
 	 * <dt><b>Precondition:</b><dd>
 	 * 	This <code>Playlist</code> object has been instantiated and 1 <= position <=
 	 *	manySongRecords.
-	 * 
+	 *
 	 * @return
-	 * 	The <code>SongRecord</code> at the specified position in this 
+	 * 	The <code>SongRecord</code> at the specified position in this
 	 * <code>Playlist</code> object.
-	 * 
+	 *
 	 * @exception IllegalArgumentException
 	 * 	Indicates that position is not within the valid range.
 	 */
@@ -190,22 +190,22 @@ public class Playlist implements Cloneable{
 	}
 
 	/**
-	 * Generates a new <code>Playlist</code> containing all SongRecords in 
+	 * Generates a new <code>Playlist</code> containing all SongRecords in
 	 * the original <code>Playlist</code> performed by the specified artist.
-	 * 
+	 *
 	 * @param originalList
 	 * 	the original <code>Playlist</code>
-	 * 
+	 *
 	 * @param artist
 	 * 	the name of the artist
-	 * 
+	 *
 	 * <dt><d>Precondition:<//b><dd>
 	 * 	The <code>Playlist</code> referred to by originalList has been instantiated.
-	 * 
+	 *
 	 * @return
-	 * 	A new <code>Playlist</code> object containing all SongRecords in the original 
+	 * 	A new <code>Playlist</code> object containing all SongRecords in the original
 	 * 	<code>Playlist</code> performed by the specified artist.
-	 * 
+	 *
 	 * @throws FullPlaylistException
 	 * 	Passed in through addSong method stating that there are over the capacity
 	 * 	of SongRecords in array.
@@ -224,14 +224,14 @@ public class Playlist implements Cloneable{
 		return answer;
 	}
 	/**
-	 * Prints a neatly formatted table of each <code>SongRecord</code> in the 
+	 * Prints a neatly formatted table of each <code>SongRecord</code> in the
 	 * <code>Playlist</code> on its own line with its position number.
-	 * 
+	 *
 	 * <dt><b>Precondition:</b><dd>
 	 * 	This <code>SongRecord</code> object has been instantiated.
-	 * 
+	 *
 	 * <dt><b>Postcondition:</b><dd>
-	 * 	A neatly formatted table of each <code>SongRecord</code> in the Playlist 
+	 * 	A neatly formatted table of each <code>SongRecord</code> in the Playlist
 	 * 	on its own line with its position number has been displayed to the user.
 	 */
 	public void printAllSongs(){
@@ -244,17 +244,17 @@ public class Playlist implements Cloneable{
 
 	/**
 	 * Generate a copy of this <code>Playlist</code>.
-	 * 
+	 *
 	 * @return
 	 * 	The return value is a copy of this <code>Playlist</code>. Subsequent
-	 * 	changes to the copy will not affect original, nor vice versa. (It is 
+	 * 	changes to the copy will not affect original, nor vice versa. (It is
 	 * 	not referenced to the same address.) Note that the return value must
 	 * 	be typecast to a <code>Playlist</code> before it can be used.
 	 */
-	public Object clone(){ 
+	public Object clone(){
 		Playlist answer = new Playlist();
 		try {
-			answer = (Playlist)super.clone(); 
+			answer = (Playlist)super.clone();
 		}
 		catch (CloneNotSupportedException e) {
 			System.out.println("Not cloneable.");
@@ -265,10 +265,10 @@ public class Playlist implements Cloneable{
 
 	/**
 	 * Compares this <code>Playlist</code> to another object for equality.
-	 * 
+	 *
 	 * @param obj
 	 * 	An object in which this <code>Playlist</code> is compared to.
-	 * 
+	 *
 	 * @return
 	 * 	Returns true if the obj refers to a <code>Playlist</code> object with
 	 * 	the same SongRecords in the same order as this <code>Playlist</code>.
@@ -285,14 +285,14 @@ public class Playlist implements Cloneable{
 			}
 			return true;
 		}
-		else 
+		else
 			return false;
 	}
 	/**
 	 * Gets the String represented of this <code>Playlist</code> object, which
-	 * is a neatly formatted table of each <code>SongRecord</code> in the 
+	 * is a neatly formatted table of each <code>SongRecord</code> in the
 	 * <code>Playlist</code> on its own line.
-	 * 
+	 *
 	 * @return
 	 * 	Returns the string Representation of this <code>Playlist</code> object.
 	 */
